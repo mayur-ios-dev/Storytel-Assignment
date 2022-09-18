@@ -35,22 +35,68 @@ class QueryResultTableViewCell: UITableViewCell {
 private extension QueryResultTableViewCell {
     func setupView() {
         contentView.backgroundColor = .white
+        
+        let (mainView, constraints) = makeMainView()
+        contentView.addSubview(mainView)
+        contentView.addConstraints(constraints)
+    }
+    
+    func makeMainView() -> (UIView, [NSLayoutConstraint]) {
         var constraints: [NSLayoutConstraint] = []
+        
         let mainStackView = makeMainStackView()
         
-        coverImageView = UIImageView()
-        coverImageView.translatesAutoresizingMaskIntoConstraints = false
-        coverImageView.contentMode = .scaleAspectFit
+        let (coverImageView, coverImageViewConstraints) = makeCoverImageView()
+        self.coverImageView = coverImageView
+        constraints.append(contentsOf: coverImageViewConstraints)
+        mainStackView.addArrangedSubview(coverImageView)
+        mainStackView.addArrangedSubview(
+            makeDetailsView()
+        )
+        
         constraints.append(
             contentsOf: [
-                coverImageView.widthAnchor.constraint(equalToConstant: .coverImageThumbnailSize),
-                coverImageView.heightAnchor.constraint(equalToConstant: .coverImageThumbnailSize)
+                contentView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
+                contentView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
+                contentView.topAnchor.constraint(equalTo: mainStackView.topAnchor),
+                contentView.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor)
             ]
         )
+        
+        return (mainStackView, constraints)
+    }
+    
+    // MARK: MainStackView setup
+    func makeMainStackView() -> UIStackView {
+        let horizontalStackView = UIStackView(frame: .zero)
+        horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
+        horizontalStackView.axis = .horizontal
+        horizontalStackView.alignment = .leading
+        horizontalStackView.spacing = UIStackView.spacingUseSystem
+        horizontalStackView.isLayoutMarginsRelativeArrangement = true
+        horizontalStackView.directionalLayoutMargins = .init(
+            top: .mainStackViewPadding,
+            leading: .mainStackViewPadding,
+            bottom: .mainStackViewPadding,
+            trailing: .mainStackViewPadding
+        )
+        return horizontalStackView
+    }
+    
+    func makeCoverImageView() -> (UIImageView, [NSLayoutConstraint]) {
+        let coverImageView = UIImageView()
         coverImageView.image = .defaultCoverImage
-        
-        mainStackView.addArrangedSubview(coverImageView)
-        
+        coverImageView.translatesAutoresizingMaskIntoConstraints = false
+        coverImageView.contentMode = .scaleAspectFit
+        let coverImageViewConstraints = [
+            coverImageView.widthAnchor.constraint(equalToConstant: .coverImageThumbnailSize),
+            coverImageView.heightAnchor.constraint(equalToConstant: .coverImageThumbnailSize)
+        ]
+        return (coverImageView, coverImageViewConstraints)
+    }
+    
+    // MARK: DetailsStackView setup
+    func makeDetailsView() -> UIView {
         let detailsStackView = makeDetailsStackView()
         
         bookTitleLabel = UILabel()
@@ -67,52 +113,23 @@ private extension QueryResultTableViewCell {
         narratorsLabel.translatesAutoresizingMaskIntoConstraints = false
         
         detailsStackView.addArrangedSubview(narratorsLabel)
-        
-        mainStackView.addArrangedSubview(detailsStackView)
-        contentView.addSubview(mainStackView)
-        
-        constraints.append(
-            contentsOf: [
-                contentView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
-                contentView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
-                contentView.topAnchor.constraint(equalTo: mainStackView.topAnchor),
-                contentView.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor)
-            ]
+        return detailsStackView
+    }
+    
+    func makeDetailsStackView() -> UIStackView {
+        let detailsStackView = UIStackView(frame: .zero)
+        detailsStackView.translatesAutoresizingMaskIntoConstraints = false
+        detailsStackView.axis = .vertical
+        detailsStackView.alignment = .fill
+        detailsStackView.spacing = UIStackView.spacingUseSystem
+        detailsStackView.isLayoutMarginsRelativeArrangement = true
+        detailsStackView.directionalLayoutMargins = .init(
+            top: .detailsStackViewPadding,
+            leading: .detailsStackViewPadding,
+            bottom: .detailsStackViewPadding,
+            trailing: .detailsStackViewPadding
         )
-        
-        contentView.addConstraints(constraints)
-        
-        func makeMainStackView() -> UIStackView {
-            let horizontalStackView = UIStackView(frame: .zero)
-            horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
-            horizontalStackView.axis = .horizontal
-            horizontalStackView.alignment = .leading
-            horizontalStackView.spacing = UIStackView.spacingUseSystem
-            horizontalStackView.isLayoutMarginsRelativeArrangement = true
-            horizontalStackView.directionalLayoutMargins = .init(
-                top: .mainStackViewPadding,
-                leading: .mainStackViewPadding,
-                bottom: .mainStackViewPadding,
-                trailing: .mainStackViewPadding
-            )
-            return horizontalStackView
-        }
-        
-        func makeDetailsStackView() -> UIStackView {
-            let detailsStackView = UIStackView(frame: .zero)
-            detailsStackView.translatesAutoresizingMaskIntoConstraints = false
-            detailsStackView.axis = .vertical
-            detailsStackView.alignment = .fill
-            detailsStackView.spacing = UIStackView.spacingUseSystem
-            detailsStackView.isLayoutMarginsRelativeArrangement = true
-            detailsStackView.directionalLayoutMargins = .init(
-                top: .detailsStackViewPadding,
-                leading: .detailsStackViewPadding,
-                bottom: .detailsStackViewPadding,
-                trailing: .detailsStackViewPadding
-            )
-            return detailsStackView
-        }
+        return detailsStackView
     }
 }
 
@@ -138,3 +155,5 @@ private extension UIImage {
         return UIImage(cgImage: cgImage)
     }()
 }
+
+
