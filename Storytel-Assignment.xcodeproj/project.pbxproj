@@ -15,6 +15,7 @@
 		77F3BAB828D508C40065045D /* Storytel_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BAB728D508C40065045D /* Storytel_AssignmentUITests.swift */; };
 		77F3BABA28D508C40065045D /* Storytel_AssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BAB928D508C40065045D /* Storytel_AssignmentUITestsLaunchTests.swift */; };
 		77F3BAC828D7646F0065045D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 77F3BAC728D7646F0065045D /* SnapshotTesting */; };
+		77F3BACA28D765800065045D /* QueryResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BAC928D765800065045D /* QueryResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		77F3BAB328D508C40065045D /* Storytel-AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storytel-AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F3BAB728D508C40065045D /* Storytel_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storytel_AssignmentUITests.swift; sourceTree = "<group>"; };
 		77F3BAB928D508C40065045D /* Storytel_AssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storytel_AssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		77F3BAC928D765800065045D /* QueryResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				77F3BA9628D508C30065045D /* AppDelegate.swift */,
 				77F3BA9828D508C30065045D /* SceneDelegate.swift */,
+				77F3BAC928D765800065045D /* QueryResultsViewController.swift */,
 				77F3BA9F28D508C40065045D /* Assets.xcassets */,
 				77F3BAA128D508C40065045D /* LaunchScreen.storyboard */,
 				77F3BAA428D508C40065045D /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */,
+				77F3BACA28D765800065045D /* QueryResultsViewController.swift in Sources */,
 				77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
