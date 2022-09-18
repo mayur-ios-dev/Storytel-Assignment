@@ -11,9 +11,10 @@
 		77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9828D508C30065045D /* SceneDelegate.swift */; };
 		77F3BAA028D508C40065045D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F3BA9F28D508C40065045D /* Assets.xcassets */; };
 		77F3BAA328D508C40065045D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F3BAA128D508C40065045D /* LaunchScreen.storyboard */; };
-		77F3BAAE28D508C40065045D /* Storytel_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BAAD28D508C40065045D /* Storytel_AssignmentTests.swift */; };
+		77F3BAAE28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BAAD28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift */; };
 		77F3BAB828D508C40065045D /* Storytel_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BAB728D508C40065045D /* Storytel_AssignmentUITests.swift */; };
 		77F3BABA28D508C40065045D /* Storytel_AssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BAB928D508C40065045D /* Storytel_AssignmentUITestsLaunchTests.swift */; };
+		77F3BAC828D7646F0065045D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 77F3BAC728D7646F0065045D /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 		77F3BAA228D508C40065045D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77F3BAA428D508C40065045D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77F3BAA928D508C40065045D /* Storytel-AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storytel-AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		77F3BAAD28D508C40065045D /* Storytel_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storytel_AssignmentTests.swift; sourceTree = "<group>"; };
+		77F3BAAD28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultsViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 		77F3BAB328D508C40065045D /* Storytel-AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storytel-AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F3BAB728D508C40065045D /* Storytel_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storytel_AssignmentUITests.swift; sourceTree = "<group>"; };
 		77F3BAB928D508C40065045D /* Storytel_AssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storytel_AssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F3BAC828D7646F0065045D /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +109,7 @@
 		77F3BAAC28D508C40065045D /* Storytel-AssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				77F3BAAD28D508C40065045D /* Storytel_AssignmentTests.swift */,
+				77F3BAAD28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift */,
 			);
 			path = "Storytel-AssignmentTests";
 			sourceTree = "<group>";
@@ -155,6 +157,9 @@
 				77F3BAAB28D508C40065045D /* PBXTargetDependency */,
 			);
 			name = "Storytel-AssignmentTests";
+			packageProductDependencies = (
+				77F3BAC728D7646F0065045D /* SnapshotTesting */,
+			);
 			productName = "Storytel-AssignmentTests";
 			productReference = 77F3BAA928D508C40065045D /* Storytel-AssignmentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -209,6 +214,9 @@
 				Base,
 			);
 			mainGroup = 77F3BA8A28D508C30065045D;
+			packageReferences = (
+				77F3BAC628D7646F0065045D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 77F3BA9428D508C30065045D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77F3BAAE28D508C40065045D /* Storytel_AssignmentTests.swift in Sources */,
+				77F3BAAE28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +594,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		77F3BAC628D7646F0065045D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		77F3BAC728D7646F0065045D /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77F3BAC628D7646F0065045D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 77F3BA8B28D508C30065045D /* Project object */;
 }
