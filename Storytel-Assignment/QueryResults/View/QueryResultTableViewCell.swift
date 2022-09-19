@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import Combine
 
 class QueryResultTableViewCell: UITableViewCell {
     
-    var coverImageView: UIImageView!
-    var bookTitleLabel: UILabel!
-    var authorsLabel: UILabel!
-    var narratorsLabel: UILabel!
+    private var coverImageView: UIImageView!
+    private var bookTitleLabel: UILabel!
+    private var authorsLabel: UILabel!
+    private var narratorsLabel: UILabel!
+    
+    private var subscriptions: Set<AnyCancellable> = []
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -172,4 +175,24 @@ private extension UIImage {
     }()
 }
 
+// MARK: - Interface
+
+protocol QueryResultCellModelType {
+    var image: AnyPublisher<UIImage, Never> { get }
+    var bookTitle: String { get }
+    var authors: String { get }
+    var narrators: String { get }
+}
+
+extension QueryResultTableViewCell {
+    func set(queryResult: QueryResultCellModelType) {
+        bookTitleLabel.text = queryResult.bookTitle
+        authorsLabel.text = queryResult.authors
+        narratorsLabel.text = queryResult.narrators
+        
+        queryResult.image.sink { [weak self] image in
+            self?.imageView?.image = image
+        }.store(in: &subscriptions)
+    }
+}
 

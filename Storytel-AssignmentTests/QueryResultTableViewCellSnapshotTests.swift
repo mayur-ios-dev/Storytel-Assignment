@@ -9,6 +9,7 @@ import XCTest
 @testable import Storytel_Assignment
 import SnapshotTesting
 import Foundation
+import Combine
 
 final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     var view: QueryResultTableViewCell!
@@ -26,18 +27,35 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     }
     
     func testShortTextsWithNoImage() {
-        view.bookTitleLabel.text = "Harry Potter"
-        view.authorsLabel.text = "JK Rowling"
-        view.narratorsLabel.text = "Mayur Deshmukh"
+        let passthroughSubject = PassthroughSubject<UIImage, Never>()
+        let queryResult = MockQueryResultCellModel(
+            image: passthroughSubject.eraseToAnyPublisher(),
+            bookTitle: "Harry Potter",
+            authors: "JK Rowling",
+            narrators: "Mayur Deshmukh"
+        )
+        view.set(queryResult: queryResult)
         assertSnapshot(matching: view.resizedContentViewForSnapshotTest, as: .image)
     }
     
     func testLongTextsWithNoImage() {
-        view.bookTitleLabel.text = "Harry Potter and the Philosopher's stone (Kid's edition)"
-        view.authorsLabel.text = "JK Rowling, JK Rowling, JK Rowling, JK Rowling, JK Rowling"
-        view.narratorsLabel.text = "Mayur Deshmukh, Mayur Deshmukh, Mayur Deshmukh, Mayur Deshmukh"
+        let passthroughSubject = PassthroughSubject<UIImage, Never>()
+        let queryResult = MockQueryResultCellModel(
+            image: passthroughSubject.eraseToAnyPublisher(),
+            bookTitle: "Harry Potter and the Philosopher's stone (Kid's edition)",
+            authors: "JK Rowling, JK Rowling, JK Rowling, JK Rowling, JK Rowling",
+            narrators: "Mayur Deshmukh, Mayur Deshmukh, Mayur Deshmukh, Mayur Deshmukh"
+        )
+        view.set(queryResult: queryResult)
         assertSnapshot(matching: view.resizedContentViewForSnapshotTest, as: .image)
     }
+}
+
+private struct MockQueryResultCellModel: QueryResultCellModelType {
+    var image: AnyPublisher<UIImage, Never>
+    var bookTitle: String
+    var authors: String
+    var narrators: String
 }
 
 extension UITableViewCell {
