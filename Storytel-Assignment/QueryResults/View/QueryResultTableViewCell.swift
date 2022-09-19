@@ -31,6 +31,18 @@ class QueryResultTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setupView()
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        for subscription in subscriptions {
+            subscription.cancel()
+        }
+        subscriptions = []
+        coverImageView.image = .defaultCoverImage
+        bookTitleLabel.text = nil
+        authorsLabel.text = nil
+        narratorsLabel.text = nil
+    }
 }
 
 // MARK: - View setup

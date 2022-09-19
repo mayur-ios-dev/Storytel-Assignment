@@ -81,6 +81,24 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
         
         assertSnapshot(matching: view.resizedContentViewForSnapshotTest, as: .image)
     }
+    
+    func testPrepareForReuse() {
+        let passthroughSubject = PassthroughSubject<UIImage, Never>()
+        let queryResult = MockQueryResultCellModel(
+            image: passthroughSubject.eraseToAnyPublisher(),
+            bookTitle: "Harry Potter",
+            authors: "JK Rowling",
+            narrators: "Mayur Deshmukh"
+        )
+        view.set(queryResult: queryResult)
+        
+        view.prepareForReuse()
+        
+        let image = UIImage.image(with: .green, size: .init(width: 600, height: 400))
+        passthroughSubject.send(image)
+        
+        assertSnapshot(matching: view.resizedContentViewForSnapshotTest, as: .image)
+    }
 }
 
 private struct MockQueryResultCellModel: QueryResultCellModelType {
