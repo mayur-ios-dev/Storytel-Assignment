@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7735446B28D89D8C000A5CF0 /* UIImage+SolidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735446A28D89D8C000A5CF0 /* UIImage+SolidColor.swift */; };
 		7735447228D8F910000A5CF0 /* UrlRequestBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */; };
+		7735447628D92659000A5CF0 /* URLSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447528D92659000A5CF0 /* URLSessionType.swift */; };
 		7735447828D92C84000A5CF0 /* UrlRequestBuildableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447728D92C84000A5CF0 /* UrlRequestBuildableTests.swift */; };
 		77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9628D508C30065045D /* AppDelegate.swift */; };
 		77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9828D508C30065045D /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		7735446A28D89D8C000A5CF0 /* UIImage+SolidColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SolidColor.swift"; sourceTree = "<group>"; };
 		7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestBuildable.swift; sourceTree = "<group>"; };
+		7735447528D92659000A5CF0 /* URLSessionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionType.swift; sourceTree = "<group>"; };
 		7735447728D92C84000A5CF0 /* UrlRequestBuildableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestBuildableTests.swift; sourceTree = "<group>"; };
 		77F3BA9328D508C30065045D /* Storytel-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storytel-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F3BA9628D508C30065045D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */,
+				7735447528D92659000A5CF0 /* URLSessionType.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				7735447228D8F910000A5CF0 /* UrlRequestBuildable.swift in Sources */,
 				7735446B28D89D8C000A5CF0 /* UIImage+SolidColor.swift in Sources */,
 				77F3BACA28D765800065045D /* QueryResultsViewController.swift in Sources */,
+				7735447628D92659000A5CF0 /* URLSessionType.swift in Sources */,
 				77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
