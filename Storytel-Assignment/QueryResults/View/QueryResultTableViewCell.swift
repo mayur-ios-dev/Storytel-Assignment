@@ -101,16 +101,22 @@ private extension QueryResultTableViewCell {
         
         bookTitleLabel = UILabel()
         bookTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        bookTitleLabel.font = .bookTitleFont
+        bookTitleLabel.textColor = .black
         
         detailsStackView.addArrangedSubview(bookTitleLabel)
         
         authorsLabel = UILabel()
         authorsLabel.translatesAutoresizingMaskIntoConstraints = false
+        authorsLabel.font = .authorsFont
+        authorsLabel.textColor = .gray
         
         detailsStackView.addArrangedSubview(authorsLabel)
         
         narratorsLabel = UILabel()
         narratorsLabel.translatesAutoresizingMaskIntoConstraints = false
+        narratorsLabel.font = .narratorFont
+        narratorsLabel.textColor = .gray
         
         detailsStackView.addArrangedSubview(narratorsLabel)
         return detailsStackView
@@ -120,7 +126,8 @@ private extension QueryResultTableViewCell {
         let detailsStackView = UIStackView(frame: .zero)
         detailsStackView.translatesAutoresizingMaskIntoConstraints = false
         detailsStackView.axis = .vertical
-        detailsStackView.alignment = .fill
+        detailsStackView.alignment = .leading
+        detailsStackView.distribution = .fill
         detailsStackView.spacing = UIStackView.spacingUseSystem
         detailsStackView.isLayoutMarginsRelativeArrangement = true
         detailsStackView.directionalLayoutMargins = .init(
@@ -135,10 +142,19 @@ private extension QueryResultTableViewCell {
 
 // MARK: View layout constants
 
+private extension UIFont {
+    static let bookTitleFont = UIFont.systemFont(ofSize: .bookTitleFontSize, weight: .medium)
+    static let authorsFont = UIFont.systemFont(ofSize: .authorFontSize, weight: .light)
+    static let narratorFont = UIFont.systemFont(ofSize: .narratorFontSize, weight: .light)
+}
+
 private extension CGFloat {
     static let mainStackViewPadding: CGFloat = 8
     static let detailsStackViewPadding: CGFloat = 0
     static let coverImageThumbnailSize: CGFloat = 64
+    static let bookTitleFontSize: CGFloat = 15
+    static let authorFontSize: CGFloat = 12
+    static let narratorFontSize: CGFloat = 12
 }
 
 private extension UIImage {

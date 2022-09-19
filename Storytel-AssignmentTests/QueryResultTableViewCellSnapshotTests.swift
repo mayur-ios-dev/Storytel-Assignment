@@ -24,6 +24,20 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     func testLoadedState() {
         assertSnapshot(matching: view.resizedContentViewForSnapshotTest, as: .image)
     }
+    
+    func testShortTextsWithNoImage() {
+        view.bookTitleLabel.text = "Harry Potter"
+        view.authorsLabel.text = "JK Rowling"
+        view.narratorsLabel.text = "Mayur Deshmukh"
+        assertSnapshot(matching: view.resizedContentViewForSnapshotTest, as: .image)
+    }
+    
+    func testLongTextsWithNoImage() {
+        view.bookTitleLabel.text = "Harry Potter and the Philosopher's stone (Kid's edition)"
+        view.authorsLabel.text = "JK Rowling, JK Rowling, JK Rowling, JK Rowling, JK Rowling"
+        view.narratorsLabel.text = "Mayur Deshmukh, Mayur Deshmukh, Mayur Deshmukh, Mayur Deshmukh"
+        assertSnapshot(matching: view.resizedContentViewForSnapshotTest, as: .image)
+    }
 }
 
 extension UITableViewCell {
