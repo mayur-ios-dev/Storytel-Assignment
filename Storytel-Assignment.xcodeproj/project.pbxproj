@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7735446B28D89D8C000A5CF0 /* UIImage+SolidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735446A28D89D8C000A5CF0 /* UIImage+SolidColor.swift */; };
+		7735447228D8F910000A5CF0 /* UrlRequestBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */; };
+		7735447828D92C84000A5CF0 /* UrlRequestBuildableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447728D92C84000A5CF0 /* UrlRequestBuildableTests.swift */; };
 		77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9628D508C30065045D /* AppDelegate.swift */; };
 		77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9828D508C30065045D /* SceneDelegate.swift */; };
 		77F3BAA028D508C40065045D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F3BA9F28D508C40065045D /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		7735446A28D89D8C000A5CF0 /* UIImage+SolidColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SolidColor.swift"; sourceTree = "<group>"; };
+		7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestBuildable.swift; sourceTree = "<group>"; };
+		7735447728D92C84000A5CF0 /* UrlRequestBuildableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestBuildableTests.swift; sourceTree = "<group>"; };
 		77F3BA9328D508C30065045D /* Storytel-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storytel-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F3BA9628D508C30065045D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F3BA9828D508C30065045D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		7735446C28D8DB89000A5CF0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		77F3BA8A28D508C30065045D = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +144,7 @@
 			children = (
 				77F3BA9628D508C30065045D /* AppDelegate.swift */,
 				77F3BA9828D508C30065045D /* SceneDelegate.swift */,
+				7735446C28D8DB89000A5CF0 /* Network */,
 				7735446928D89D6B000A5CF0 /* Utilities */,
 				7735446328D7D7DA000A5CF0 /* QueryResults */,
 				77F3BA9F28D508C40065045D /* Assets.xcassets */,
@@ -144,6 +157,7 @@
 		77F3BAAC28D508C40065045D /* Storytel-AssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				7735447728D92C84000A5CF0 /* UrlRequestBuildableTests.swift */,
 				77F3BAAD28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift */,
 				77F3BACD28D771FE0065045D /* QueryResultTableViewCellSnapshotTests.swift */,
 			);
@@ -297,6 +311,7 @@
 			files = (
 				77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */,
 				77F3BAD028D7761B0065045D /* QueryResultTableViewCell.swift in Sources */,
+				7735447228D8F910000A5CF0 /* UrlRequestBuildable.swift in Sources */,
 				7735446B28D89D8C000A5CF0 /* UIImage+SolidColor.swift in Sources */,
 				77F3BACA28D765800065045D /* QueryResultsViewController.swift in Sources */,
 				77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */,
@@ -309,6 +324,7 @@
 			files = (
 				77F3BAAE28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift in Sources */,
 				77F3BACE28D771FE0065045D /* QueryResultTableViewCellSnapshotTests.swift in Sources */,
+				7735447828D92C84000A5CF0 /* UrlRequestBuildableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
