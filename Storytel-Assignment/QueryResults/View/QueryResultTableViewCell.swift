@@ -186,7 +186,7 @@ extension QueryResultTableViewCell {
         narratorsLabel.text = queryResult.narrators
         
         queryResult.image.sink { [weak self] image in
-            self?.imageView?.image = image
+            self?.coverImageView.image = image
         }.store(in: &subscriptions)
     }
 }
