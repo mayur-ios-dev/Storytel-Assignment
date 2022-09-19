@@ -161,18 +161,13 @@ private extension CGFloat {
 }
 
 private extension UIImage {
-    static let defaultCoverImage = {
-        let rect = CGRect(origin: .zero, size: .init(width: .coverImageThumbnailSize, height: .coverImageThumbnailSize))
-        let color = UIColor.lightGray
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        color.setFill()
-        UIRectFill(rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        guard let cgImage = image?.cgImage else { return UIImage() }
-        return UIImage(cgImage: cgImage)
-    }()
+    static let defaultCoverImage = image(
+        with: .lightGray,
+        size: .init(
+            width: .coverImageThumbnailSize,
+            height: .coverImageThumbnailSize
+        )
+    )
 }
 
 // MARK: - Interface
