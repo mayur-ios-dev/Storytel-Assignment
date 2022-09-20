@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7735446B28D89D8C000A5CF0 /* UIImage+SolidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735446A28D89D8C000A5CF0 /* UIImage+SolidColor.swift */; };
+		7735446E28D8E076000A5CF0 /* ApiQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735446D28D8E076000A5CF0 /* ApiQueryService.swift */; };
+		7735447028D8F8CB000A5CF0 /* ApiQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735446F28D8F8CB000A5CF0 /* ApiQueryRequest.swift */; };
 		7735447228D8F910000A5CF0 /* UrlRequestBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */; };
 		7735447428D91BCB000A5CF0 /* ApiQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447328D91BCB000A5CF0 /* ApiQueryResult.swift */; };
 		7735447628D92659000A5CF0 /* URLSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447528D92659000A5CF0 /* URLSessionType.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		7735446A28D89D8C000A5CF0 /* UIImage+SolidColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SolidColor.swift"; sourceTree = "<group>"; };
+		7735446D28D8E076000A5CF0 /* ApiQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQueryService.swift; sourceTree = "<group>"; };
+		7735446F28D8F8CB000A5CF0 /* ApiQueryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQueryRequest.swift; sourceTree = "<group>"; };
 		7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestBuildable.swift; sourceTree = "<group>"; };
 		7735447328D91BCB000A5CF0 /* ApiQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQueryResult.swift; sourceTree = "<group>"; };
 		7735447528D92659000A5CF0 /* URLSessionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionType.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			children = (
 				7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */,
 				7735447528D92659000A5CF0 /* URLSessionType.swift */,
+				7735446D28D8E076000A5CF0 /* ApiQueryService.swift */,
+				7735446F28D8F8CB000A5CF0 /* ApiQueryRequest.swift */,
 				7735447328D91BCB000A5CF0 /* ApiQueryResult.swift */,
 			);
 			path = Network;
@@ -320,6 +326,8 @@
 			files = (
 				77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */,
 				77F3BAD028D7761B0065045D /* QueryResultTableViewCell.swift in Sources */,
+				7735447028D8F8CB000A5CF0 /* ApiQueryRequest.swift in Sources */,
+				7735446E28D8E076000A5CF0 /* ApiQueryService.swift in Sources */,
 				7735447228D8F910000A5CF0 /* UrlRequestBuildable.swift in Sources */,
 				7735447428D91BCB000A5CF0 /* ApiQueryResult.swift in Sources */,
 				7735446B28D89D8C000A5CF0 /* UIImage+SolidColor.swift in Sources */,
