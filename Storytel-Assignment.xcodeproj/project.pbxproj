@@ -15,6 +15,7 @@
 		7735447628D92659000A5CF0 /* URLSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447528D92659000A5CF0 /* URLSessionType.swift */; };
 		7735447828D92C84000A5CF0 /* UrlRequestBuildableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447728D92C84000A5CF0 /* UrlRequestBuildableTests.swift */; };
 		7735447A28D93BA9000A5CF0 /* ApiQueryResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447928D93BA9000A5CF0 /* ApiQueryResultTests.swift */; };
+		7735447C28DB83E8000A5CF0 /* QueryResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447B28DB83E8000A5CF0 /* QueryResultsViewModel.swift */; };
 		77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9628D508C30065045D /* AppDelegate.swift */; };
 		77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9828D508C30065045D /* SceneDelegate.swift */; };
 		77F3BAA028D508C40065045D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F3BA9F28D508C40065045D /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		7735447528D92659000A5CF0 /* URLSessionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionType.swift; sourceTree = "<group>"; };
 		7735447728D92C84000A5CF0 /* UrlRequestBuildableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestBuildableTests.swift; sourceTree = "<group>"; };
 		7735447928D93BA9000A5CF0 /* ApiQueryResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQueryResultTests.swift; sourceTree = "<group>"; };
+		7735447B28DB83E8000A5CF0 /* QueryResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultsViewModel.swift; sourceTree = "<group>"; };
 		77F3BA9328D508C30065045D /* Storytel-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storytel-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F3BA9628D508C30065045D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F3BA9828D508C30065045D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				77F3BAC928D765800065045D /* QueryResultsViewController.swift */,
+				7735447B28DB83E8000A5CF0 /* QueryResultsViewModel.swift */,
 				77F3BACF28D7761B0065045D /* QueryResultTableViewCell.swift */,
 			);
 			path = View;
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7735447C28DB83E8000A5CF0 /* QueryResultsViewModel.swift in Sources */,
 				77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */,
 				77F3BAD028D7761B0065045D /* QueryResultTableViewCell.swift in Sources */,
 				7735447028D8F8CB000A5CF0 /* ApiQueryRequest.swift in Sources */,
