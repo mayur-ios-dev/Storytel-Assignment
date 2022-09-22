@@ -185,7 +185,7 @@ private extension UIImage {
 // MARK: - Interface
 
 struct QueryResultCellModel {
-    var image: AnyPublisher<UIImage, Never>
+    var image: AnyPublisher<UIImage, Error>
     var bookTitle: String
     var authors: String
     var narrators: String
@@ -197,7 +197,9 @@ extension QueryResultTableViewCell {
         authorsLabel.text = queryResult.authors
         narratorsLabel.text = queryResult.narrators
         
-        queryResult.image.sink { [weak self] image in
+        queryResult.image.sink { _ in
+            // Set a failure image if provided by designer
+        } receiveValue: { [weak self] image in
             self?.coverImageView.image = image
         }.store(in: &subscriptions)
     }
