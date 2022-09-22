@@ -9,18 +9,9 @@ import Foundation
 
 struct ApiQueryRequest {
     let query: String
-    let filter: SearchFilter
+    let filter: String?
     let store: String
     let nextPageToken: String?
-    
-    enum SearchFilter: String {
-        case books
-        case booksAndEpisode = "books_and_episodes"
-        case authors
-        case narrators
-        case tags
-        case series
-    }
 }
 
 extension ApiQueryRequest: UrlRequestBuildable {
@@ -31,11 +22,16 @@ extension ApiQueryRequest: UrlRequestBuildable {
     var method: HTTPMethod { .get }
     
     var queryParameters: [String : String] {
-        [
+        var queryParameters = [
             "query": query,
-            "searchFor": filter.rawValue,
-            "store": store,
-            "page": nextPageToken ?? "0"
+            "store": store
         ]
+        if let filter = filter {
+            queryParameters["searchFor"] = filter
+        }
+        if let nextPageToken = nextPageToken {
+            queryParameters["page"] = nextPageToken
+        }
+        return queryParameters
     }
 }
