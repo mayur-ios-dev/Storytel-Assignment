@@ -18,6 +18,8 @@
 		7735447C28DB83E8000A5CF0 /* QueryResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447B28DB83E8000A5CF0 /* QueryResultsViewModel.swift */; };
 		7735447E28DB991F000A5CF0 /* QueryHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447D28DB991F000A5CF0 /* QueryHeaderTableViewCell.swift */; };
 		7735448028DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447F28DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift */; };
+		7735448228DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448128DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift */; };
+		7735448428DC9988000A5CF0 /* QueryLoaderTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448328DC9988000A5CF0 /* QueryLoaderTableViewCellSnapshotTests.swift */; };
 		77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9628D508C30065045D /* AppDelegate.swift */; };
 		77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9828D508C30065045D /* SceneDelegate.swift */; };
 		77F3BAA028D508C40065045D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F3BA9F28D508C40065045D /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		7735447B28DB83E8000A5CF0 /* QueryResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultsViewModel.swift; sourceTree = "<group>"; };
 		7735447D28DB991F000A5CF0 /* QueryHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		7735447F28DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHeaderTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
+		7735448128DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryLoaderTableViewCell.swift; sourceTree = "<group>"; };
+		7735448328DC9988000A5CF0 /* QueryLoaderTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryLoaderTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
 		77F3BA9328D508C30065045D /* Storytel-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storytel-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F3BA9628D508C30065045D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F3BA9828D508C30065045D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				7735447B28DB83E8000A5CF0 /* QueryResultsViewModel.swift */,
 				77F3BACF28D7761B0065045D /* QueryResultTableViewCell.swift */,
 				7735447D28DB991F000A5CF0 /* QueryHeaderTableViewCell.swift */,
+				7735448128DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				77F3BAAD28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift */,
 				77F3BACD28D771FE0065045D /* QueryResultTableViewCellSnapshotTests.swift */,
 				7735447F28DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift */,
+				7735448328DC9988000A5CF0 /* QueryLoaderTableViewCellSnapshotTests.swift */,
 			);
 			path = "Storytel-AssignmentTests";
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 				7735446B28D89D8C000A5CF0 /* UIImage+SolidColor.swift in Sources */,
 				77F3BACA28D765800065045D /* QueryResultsViewController.swift in Sources */,
 				7735447628D92659000A5CF0 /* URLSessionType.swift in Sources */,
+				7735448228DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift in Sources */,
 				77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +364,7 @@
 				77F3BACE28D771FE0065045D /* QueryResultTableViewCellSnapshotTests.swift in Sources */,
 				7735447A28D93BA9000A5CF0 /* ApiQueryResultTests.swift in Sources */,
 				7735447828D92C84000A5CF0 /* UrlRequestBuildableTests.swift in Sources */,
+				7735448428DC9988000A5CF0 /* QueryLoaderTableViewCellSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
