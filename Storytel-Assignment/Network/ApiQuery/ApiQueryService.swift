@@ -34,7 +34,7 @@ extension ApiQueryService: ApiQueryServiceType {
             store: store,
             nextPageToken: nextPageToken
         )
-        return URLSession.shared
+        return session
             .dataTaskPublisher(for: try queryRequest.request)
             .tryMap {
                 guard let response = $1 as? HTTPURLResponse else {
