@@ -27,7 +27,7 @@ class QueryLoaderTableViewCell: UITableViewCell {
 
 private extension QueryLoaderTableViewCell {
     func setupView() {
-        contentView.backgroundColor = .clear
+        contentView.backgroundColor = .systemGray6
         
         let (mainView, constraints) = makeMainView()
         contentView.addSubview(mainView)
