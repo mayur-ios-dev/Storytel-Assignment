@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct QueryModel {
+struct QueryMetadataModel {
     let query: String
     let filter: SearchFilter
     let store: String

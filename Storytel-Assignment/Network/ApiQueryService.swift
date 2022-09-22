@@ -10,7 +10,7 @@ import Combine
 
 protocol ApiQueryServiceType {
     func search(_ query: String,
-                filter: QueryModel.SearchFilter?,
+                filter: QueryMetadataModel.SearchFilter?,
                 store: String,
                 nextPageToken: String?) throws -> AnyPublisher<ApiQueryResult, Error>
 }
@@ -25,7 +25,7 @@ final class ApiQueryService {
 
 extension ApiQueryService: ApiQueryServiceType {
     func search(_ query: String,
-                filter: QueryModel.SearchFilter?,
+                filter: QueryMetadataModel.SearchFilter?,
                 store: String,
                 nextPageToken: String?) throws -> AnyPublisher<ApiQueryResult, Error> {
         let queryRequest = ApiQueryRequest(
