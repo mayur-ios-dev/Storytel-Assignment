@@ -34,7 +34,7 @@ class QueryHeaderTableViewCell: UITableViewCell {
 
 private extension QueryHeaderTableViewCell {
     func setupView() {
-        contentView.backgroundColor = .clear
+        contentView.backgroundColor = .systemGray4
         
         let (mainView, constraints) = makeMainView()
         contentView.addSubview(mainView)
