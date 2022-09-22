@@ -9,7 +9,7 @@ import Foundation
 
 struct QueryMetadataModel {
     let query: String
-    let filter: SearchFilter
+    let filter: SearchFilter?
     let store: String
     
     enum SearchFilter: String {
