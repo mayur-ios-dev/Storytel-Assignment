@@ -20,6 +20,7 @@
 		7735448028DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447F28DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift */; };
 		7735448228DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448128DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift */; };
 		7735448428DC9988000A5CF0 /* QueryLoaderTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448328DC9988000A5CF0 /* QueryLoaderTableViewCellSnapshotTests.swift */; };
+		7735448628DCA5C0000A5CF0 /* QueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448528DCA5C0000A5CF0 /* QueryModel.swift */; };
 		77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9628D508C30065045D /* AppDelegate.swift */; };
 		77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9828D508C30065045D /* SceneDelegate.swift */; };
 		77F3BAA028D508C40065045D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F3BA9F28D508C40065045D /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		7735447F28DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHeaderTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
 		7735448128DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryLoaderTableViewCell.swift; sourceTree = "<group>"; };
 		7735448328DC9988000A5CF0 /* QueryLoaderTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryLoaderTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
+		7735448528DCA5C0000A5CF0 /* QueryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryModel.swift; sourceTree = "<group>"; };
 		77F3BA9328D508C30065045D /* Storytel-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storytel-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F3BA9628D508C30065045D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F3BA9828D508C30065045D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				77F3BACF28D7761B0065045D /* QueryResultTableViewCell.swift */,
 				7735447D28DB991F000A5CF0 /* QueryHeaderTableViewCell.swift */,
 				7735448128DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift */,
+				7735448528DCA5C0000A5CF0 /* QueryModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */,
 				77F3BAD028D7761B0065045D /* QueryResultTableViewCell.swift in Sources */,
 				7735447028D8F8CB000A5CF0 /* ApiQueryRequest.swift in Sources */,
+				7735448628DCA5C0000A5CF0 /* QueryModel.swift in Sources */,
 				7735446E28D8E076000A5CF0 /* ApiQueryService.swift in Sources */,
 				7735447228D8F910000A5CF0 /* UrlRequestBuildable.swift in Sources */,
 				7735447428D91BCB000A5CF0 /* ApiQueryResult.swift in Sources */,
