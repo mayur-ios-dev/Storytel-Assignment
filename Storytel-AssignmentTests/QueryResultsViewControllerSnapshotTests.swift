@@ -89,7 +89,8 @@ private class MockViewModel: QueryResultsViewModelType {
                     with: .blue,
                     size: .init(width: 400, height: 600)
                 )
-            ).eraseToAnyPublisher(),
+            ).tryMap { $0 }
+            .eraseToAnyPublisher(),
             bookTitle: "\(index). Harry Potter and The Prisoner of Azkaban",
             authors: "by J.K. Rowling",
             narrators: "with M.D Deshmukh"

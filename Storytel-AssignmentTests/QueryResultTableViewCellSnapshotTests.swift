@@ -27,7 +27,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     }
     
     func testShortTextsWithNoImage() {
-        let passthroughSubject = PassthroughSubject<UIImage, Never>()
+        let passthroughSubject = PassthroughSubject<UIImage, Error>()
         let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter",
@@ -39,7 +39,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     }
     
     func testLongTextsWithNoImage() {
-        let passthroughSubject = PassthroughSubject<UIImage, Never>()
+        let passthroughSubject = PassthroughSubject<UIImage, Error>()
         let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter and the Philosopher's stone (Kid's edition)",
@@ -51,7 +51,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     }
     
     func testPortraitImage() {
-        let passthroughSubject = PassthroughSubject<UIImage, Never>()
+        let passthroughSubject = PassthroughSubject<UIImage, Error>()
         let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter",
@@ -67,7 +67,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     }
     
     func testLandscapeImage() {
-        let passthroughSubject = PassthroughSubject<UIImage, Never>()
+        let passthroughSubject = PassthroughSubject<UIImage, Error>()
         let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter",
@@ -83,7 +83,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     }
     
     func testPrepareForReuse() {
-        let passthroughSubject = PassthroughSubject<UIImage, Never>()
+        let passthroughSubject = PassthroughSubject<UIImage, Error>()
         let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter",
