@@ -28,7 +28,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     
     func testShortTextsWithNoImage() {
         let passthroughSubject = PassthroughSubject<UIImage, Never>()
-        let queryResult = MockQueryResultCellModel(
+        let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter",
             authors: "JK Rowling",
@@ -40,7 +40,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     
     func testLongTextsWithNoImage() {
         let passthroughSubject = PassthroughSubject<UIImage, Never>()
-        let queryResult = MockQueryResultCellModel(
+        let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter and the Philosopher's stone (Kid's edition)",
             authors: "JK Rowling, JK Rowling, JK Rowling, JK Rowling, JK Rowling",
@@ -52,7 +52,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     
     func testPortraitImage() {
         let passthroughSubject = PassthroughSubject<UIImage, Never>()
-        let queryResult = MockQueryResultCellModel(
+        let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter",
             authors: "JK Rowling",
@@ -68,7 +68,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     
     func testLandscapeImage() {
         let passthroughSubject = PassthroughSubject<UIImage, Never>()
-        let queryResult = MockQueryResultCellModel(
+        let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter",
             authors: "JK Rowling",
@@ -84,7 +84,7 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
     
     func testPrepareForReuse() {
         let passthroughSubject = PassthroughSubject<UIImage, Never>()
-        let queryResult = MockQueryResultCellModel(
+        let queryResult = QueryResultCellModel(
             image: passthroughSubject.eraseToAnyPublisher(),
             bookTitle: "Harry Potter",
             authors: "JK Rowling",
@@ -99,13 +99,6 @@ final class QueryResultTableViewCellSnapshotTests: XCTestCase {
         
         assertSnapshot(matching: view.resizedContentViewForSnapshotTest, as: .image)
     }
-}
-
-private struct MockQueryResultCellModel: QueryResultCellModelType {
-    var image: AnyPublisher<UIImage, Never>
-    var bookTitle: String
-    var authors: String
-    var narrators: String
 }
 
 extension UITableViewCell {

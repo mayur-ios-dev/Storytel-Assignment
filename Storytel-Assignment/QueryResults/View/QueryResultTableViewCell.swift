@@ -184,15 +184,15 @@ private extension UIImage {
 
 // MARK: - Interface
 
-protocol QueryResultCellModelType {
-    var image: AnyPublisher<UIImage, Never> { get }
-    var bookTitle: String { get }
-    var authors: String { get }
-    var narrators: String { get }
+struct QueryResultCellModel {
+    var image: AnyPublisher<UIImage, Never>
+    var bookTitle: String
+    var authors: String
+    var narrators: String
 }
 
 extension QueryResultTableViewCell {
-    func set(queryResult: QueryResultCellModelType) {
+    func set(queryResult: QueryResultCellModel) {
         bookTitleLabel.text = queryResult.bookTitle
         authorsLabel.text = queryResult.authors
         narratorsLabel.text = queryResult.narrators
