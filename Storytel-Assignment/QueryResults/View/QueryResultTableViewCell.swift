@@ -38,7 +38,7 @@ class QueryResultTableViewCell: UITableViewCell {
             subscription.cancel()
         }
         subscriptions = []
-        coverImageView.image = .defaultCoverImage
+        coverImageView.image = .defaultAnimatedImage
         bookTitleLabel.text = nil
         authorsLabel.text = nil
         narratorsLabel.text = nil
@@ -101,7 +101,7 @@ private extension QueryResultTableViewCell {
     
     func makeCoverImageView() -> (UIImageView, [NSLayoutConstraint]) {
         let coverImageView = UIImageView()
-        coverImageView.image = .defaultCoverImage
+        coverImageView.image = .defaultAnimatedImage
         coverImageView.translatesAutoresizingMaskIntoConstraints = false
         coverImageView.contentMode = .scaleAspectFit
         let coverImageViewConstraints = [
@@ -173,13 +173,36 @@ private extension CGFloat {
 }
 
 private extension UIImage {
-    static let defaultCoverImage = image(
-        with: .lightGray,
+    static let defaultCoverImage1 = image(
+        with: .systemGray,
         size: .init(
             width: .coverImageThumbnailSize,
             height: .coverImageThumbnailSize
         )
     )
+    static let defaultCoverImage2 = image(
+        with: .systemGray6,
+        size: .init(
+            width: .coverImageThumbnailSize,
+            height: .coverImageThumbnailSize
+        )
+    )
+    static let defaultAnimatedImage = {
+        let animatingColors: [UIColor] = [.systemGray, .systemGray2, .systemGray3, .systemGray4, .systemGray5, .systemGray6, .systemGray5, .systemGray4, .systemGray3, .systemGray2, .systemGray]
+        
+        return UIImage.animatedImage(
+            with: animatingColors.map {
+                image(
+                    with: $0,
+                    size: .init(
+                        width: .coverImageThumbnailSize,
+                        height: .coverImageThumbnailSize
+                    )
+                )
+            },
+            duration: 3
+        )
+    }()
 }
 
 // MARK: - Interface
