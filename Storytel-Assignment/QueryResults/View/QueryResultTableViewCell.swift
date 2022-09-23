@@ -49,7 +49,7 @@ class QueryResultTableViewCell: UITableViewCell {
 
 private extension QueryResultTableViewCell {
     func setupView() {
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .systemBackground
         
         let (mainView, constraints) = makeMainView()
         contentView.addSubview(mainView)
@@ -117,21 +117,20 @@ private extension QueryResultTableViewCell {
         bookTitleLabel = UILabel()
         bookTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         bookTitleLabel.font = .bookTitleFont
-        bookTitleLabel.textColor = .black
         
         detailsStackView.addArrangedSubview(bookTitleLabel)
         
         authorsLabel = UILabel()
         authorsLabel.translatesAutoresizingMaskIntoConstraints = false
         authorsLabel.font = .authorsFont
-        authorsLabel.textColor = .gray
+        authorsLabel.textColor = .systemGray
         
         detailsStackView.addArrangedSubview(authorsLabel)
         
         narratorsLabel = UILabel()
         narratorsLabel.translatesAutoresizingMaskIntoConstraints = false
         narratorsLabel.font = .narratorFont
-        narratorsLabel.textColor = .gray
+        narratorsLabel.textColor = .systemGray
         
         detailsStackView.addArrangedSubview(narratorsLabel)
         return detailsStackView

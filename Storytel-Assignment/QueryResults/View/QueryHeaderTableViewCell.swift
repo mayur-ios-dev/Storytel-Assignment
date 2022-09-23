@@ -45,7 +45,6 @@ private extension QueryHeaderTableViewCell {
         queryLabel = UILabel()
         queryLabel.translatesAutoresizingMaskIntoConstraints = false
         queryLabel.font = .queryFontSize
-        queryLabel.textColor = .black
         queryLabel.textAlignment = .center
         queryLabel.numberOfLines = 0
         

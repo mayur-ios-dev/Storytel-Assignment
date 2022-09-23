@@ -22,6 +22,7 @@ final class QueryLoaderTableViewCellSnapshotTests: XCTestCase {
     }
 
     func testLoadedState() {
+        view.startAnimating()
         assertSnapshot(matching: view.resizedContentViewForSnapshotTest, as: .image)
     }
 }

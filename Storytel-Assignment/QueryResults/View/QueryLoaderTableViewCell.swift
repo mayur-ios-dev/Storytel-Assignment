@@ -8,6 +8,8 @@
 import UIKit
 
 class QueryLoaderTableViewCell: UITableViewCell {
+    
+    private var activityIndicator: UIActivityIndicatorView!
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,6 +25,10 @@ class QueryLoaderTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setupView()
     }
+    
+    func startAnimating() {
+        activityIndicator.startAnimating()
+    }
 }
 
 private extension QueryLoaderTableViewCell {
@@ -35,8 +41,8 @@ private extension QueryLoaderTableViewCell {
     }
     
     func makeMainView() -> (UIView, [NSLayoutConstraint]) {
-        let activityIndicator = UIActivityIndicatorView(style: .medium)
-        activityIndicator.startAnimating()
+        activityIndicator = UIActivityIndicatorView(style: .medium)
+        activityIndicator.tintColor = .systemGray
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [

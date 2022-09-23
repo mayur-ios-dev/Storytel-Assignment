@@ -66,7 +66,7 @@ private extension QueryResultsViewController {
         
         let constraints = [
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
@@ -134,6 +134,7 @@ extension QueryResultsViewController: UITableViewDataSource {
                 assertionFailure("QueryLoaderTableViewCell not registered for \(String.queryLoaderCellReuseIdentifier)")
                 return UITableViewCell()
             }
+            loaderCell.startAnimating()
             return loaderCell
         default:
             assertionFailure("Unexpected section requested - \(indexPath.section)")
