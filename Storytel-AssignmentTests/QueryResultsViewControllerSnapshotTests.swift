@@ -55,7 +55,7 @@ final class QueryResultsViewControllerSnapshotTests: XCTestCase {
         XCTAssertTrue(viewModel.inputs.count > 0)
         
         viewModel.rowsInSection = [1, 12, 1]
-        viewModel.output.send(.dataFetched)
+        viewModel.output.send(.newDataAdded(startIndex: 6, count: 6))
         
         assertSnapshot(matching: viewController, as: .image)
     }

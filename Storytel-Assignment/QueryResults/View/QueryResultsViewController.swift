@@ -154,8 +154,14 @@ private extension QueryResultsViewController {
     
     func handleOutput(_ output: QueryResultsViewModel.Output) {
         switch output {
-        case .dataFetched:
-            tableView.reloadData()
+        case .newDataAdded(let startIndex, let count):
+            let endIndex = startIndex + count
+            var indexPathsToReload: [IndexPath] = []
+            for row in startIndex..<endIndex {
+                indexPathsToReload.append(.init(row: row, section: 1))
+            }
+            
+            tableView.insertRows(at: indexPathsToReload, with: .automatic)
         }
     }
 }

@@ -40,7 +40,9 @@ final class QueryResultsViewModelTests: XCTestCase {
         viewModel
             .map(input.eraseToAnyPublisher())
             .sink { output in
-                XCTAssertEqual(output, .dataFetched)
+                guard case .newDataAdded = output else {
+                    return XCTFail()
+                }
                 outputExpectation.fulfill()
             }
             .store(in: &subscriptions)
@@ -73,7 +75,9 @@ final class QueryResultsViewModelTests: XCTestCase {
         viewModel
             .map(input.eraseToAnyPublisher())
             .sink { output in
-                XCTAssertEqual(output, .dataFetched)
+                guard case .newDataAdded = output else {
+                    return XCTFail()
+                }
             }
             .store(in: &subscriptions)
         
@@ -115,7 +119,9 @@ final class QueryResultsViewModelTests: XCTestCase {
         viewModel
             .map(input.eraseToAnyPublisher())
             .sink { output in
-                XCTAssertEqual(output, .dataFetched)
+                guard case .newDataAdded = output else {
+                    return XCTFail()
+                }
             }
             .store(in: &subscriptions)
         

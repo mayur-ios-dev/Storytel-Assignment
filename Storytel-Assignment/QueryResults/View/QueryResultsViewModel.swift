@@ -89,14 +89,21 @@ private extension QueryResultsViewModel {
             ).sink(receiveCompletion: { _ in
                 // log error
             }, receiveValue: { [weak self] newQueryResult in
-                self?.queryResult = self?.queryResult.appending(newQueryResult)
-                if newQueryResult.items.count > 0 {
-                    self?.output.send(.dataFetched)
-                }
+                self?.handle(newQueryResult: newQueryResult)
             }).store(in: &subscriptions)
         } catch {
             // log error
         }
+    }
+    
+    func handle(newQueryResult: ApiQueryResult) {
+        let updatedQueryResult = queryResult.appending(newQueryResult)
+        guard newQueryResult.items.count > 0 else { return }
+        let startIndexOfNewItems = queryResult?.items.count ?? 0
+        queryResult = updatedQueryResult
+        output.send(
+            .newDataAdded(startIndex: startIndexOfNewItems, count: newQueryResult.items.count)
+        )
     }
     
     func queryResultCellModel(from item: ApiQueryResult.Item) -> QueryResultCellModel {
@@ -140,7 +147,7 @@ extension QueryResultsViewModel {
     }
     
     enum Output {
-        case dataFetched
+        case newDataAdded(startIndex: Int, count: Int)
     }
 }
 
