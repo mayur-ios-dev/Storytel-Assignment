@@ -14,6 +14,7 @@ protocol ApiImageLoaderServiceType {
 
 final class ApiImageLoaderService {
     private let session: URLSessionType
+    private let imageCache = NSCache<AnyObject, UIImage>()
     
     init(session: URLSessionType = URLSession.shared) {
         self.session = session
@@ -35,20 +36,33 @@ extension ApiImageLoaderService: ApiImageLoaderServiceType {
                 )
             )
         }
+        if let cachedImage = cachedImage(for: url) {
+            return Just(cachedImage)
+                .tryMap { $0 }
+                .eraseToAnyPublisher()
+        }
         let urlrequest = URLRequest(
             url: url,
-            cachePolicy: .returnCacheDataElseLoad,
             timeoutInterval: 120
         )
         
         return session
             .dataTaskPublisher(for: urlrequest)
-            .tryMap { data, _ in
+            .tryMap { [weak self] data, _ in
                 guard let image = UIImage(data: data) else {
                     throw ApiImageLoaderServiceError.couldNotBuildImageFromData(data)
                 }
+                self?.cache(image, for: url)
                 return image
             }.eraseToAnyPublisher()
+    }
+    
+    private func cache(_ image: UIImage, for url: URL) {
+        imageCache.setObject(image, forKey: url as AnyObject)
+    }
+    
+    private func cachedImage(for url: URL) -> UIImage? {
+        imageCache.object(forKey: url as AnyObject)
     }
 }
 
