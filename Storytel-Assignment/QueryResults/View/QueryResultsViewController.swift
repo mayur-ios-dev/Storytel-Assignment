@@ -41,7 +41,7 @@ private extension QueryResultsViewController {
     func setupView() {
         let (mainView, constraints) = makeMainView()
         view.addSubview(mainView)
-        view.addConstraints(constraints)
+        NSLayoutConstraint.activate(constraints)
     }
     
     func makeMainView() -> (UIView, [NSLayoutConstraint]) {

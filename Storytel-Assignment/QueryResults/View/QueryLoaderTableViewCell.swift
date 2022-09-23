@@ -37,7 +37,7 @@ private extension QueryLoaderTableViewCell {
         
         let (mainView, constraints) = makeMainView()
         contentView.addSubview(mainView)
-        contentView.addConstraints(constraints)
+        NSLayoutConstraint.activate(constraints)
     }
     
     func makeMainView() -> (UIView, [NSLayoutConstraint]) {
@@ -48,7 +48,7 @@ private extension QueryLoaderTableViewCell {
         let constraints = [
             activityIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 80)
+            contentView.heightAnchor.constraint(equalToConstant: 80).with(priority: .defaultHigh)
         ]
         
         return (activityIndicator, constraints)

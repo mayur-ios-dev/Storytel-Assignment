@@ -38,7 +38,7 @@ private extension QueryHeaderTableViewCell {
         
         let (mainView, constraints) = makeMainView()
         contentView.addSubview(mainView)
-        contentView.addConstraints(constraints)
+        NSLayoutConstraint.activate(constraints)
     }
     
     func makeMainView() -> (UIView, [NSLayoutConstraint]) {
@@ -66,6 +66,7 @@ private extension QueryHeaderTableViewCell {
                 constant: .horizontalPadding
             ),
             contentView.heightAnchor.constraint(equalToConstant: .headerSize)
+                .with(priority: .defaultHigh)
         ]
         
         return (queryLabel, constraints)

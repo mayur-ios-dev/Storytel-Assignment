@@ -53,7 +53,7 @@ private extension QueryResultTableViewCell {
         
         let (mainView, constraints) = makeMainView()
         contentView.addSubview(mainView)
-        contentView.addConstraints(constraints)
+        NSLayoutConstraint.activate(constraints)
     }
     
     func makeMainView() -> (UIView, [NSLayoutConstraint]) {
@@ -75,6 +75,7 @@ private extension QueryResultTableViewCell {
                 contentView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
                 contentView.topAnchor.constraint(equalTo: mainStackView.topAnchor),
                 contentView.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor)
+                    .with(priority: .defaultHigh)
             ]
         )
         
