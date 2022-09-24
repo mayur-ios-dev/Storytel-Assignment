@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Storytel_Assignment
+@testable import Storytel
 import SnapshotTesting
 import Combine
 
@@ -82,7 +82,7 @@ private class MockViewModel: QueryResultsViewModelType {
         rowsInSection[section]
     }
     
-    func queryResult(at index: Int) throws -> Storytel_Assignment.QueryResultCellModel {
+    func queryResult(at index: Int) throws -> QueryResultCellModel {
         QueryResultCellModel(
             image: Just(
                 UIImage.image(

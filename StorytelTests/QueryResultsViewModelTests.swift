@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Storytel_Assignment
+@testable import Storytel
 import Combine
 
 final class QueryResultsViewModelTests: XCTestCase {

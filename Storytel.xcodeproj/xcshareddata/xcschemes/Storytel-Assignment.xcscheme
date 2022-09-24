@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77F3BA9228D508C30065045D"
-               BuildableName = "Storytel-Assignment.app"
-               BlueprintName = "Storytel-Assignment"
-               ReferencedContainer = "container:Storytel-Assignment.xcodeproj">
+               BuildableName = "Storytel.app"
+               BlueprintName = "Storytel"
+               ReferencedContainer = "container:Storytel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77F3BA9228D508C30065045D"
-            BuildableName = "Storytel-Assignment.app"
-            BlueprintName = "Storytel-Assignment"
-            ReferencedContainer = "container:Storytel-Assignment.xcodeproj">
+            BuildableName = "Storytel.app"
+            BlueprintName = "Storytel"
+            ReferencedContainer = "container:Storytel.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -45,9 +45,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77F3BAA828D508C40065045D"
-               BuildableName = "Storytel-AssignmentTests.xctest"
-               BlueprintName = "Storytel-AssignmentTests"
-               ReferencedContainer = "container:Storytel-Assignment.xcodeproj">
+               BuildableName = "StorytelTests.xctest"
+               BlueprintName = "StorytelTests"
+               ReferencedContainer = "container:Storytel.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -58,7 +58,7 @@
                BlueprintIdentifier = "77F3BAB228D508C40065045D"
                BuildableName = "Storytel-AssignmentUITests.xctest"
                BlueprintName = "Storytel-AssignmentUITests"
-               ReferencedContainer = "container:Storytel-Assignment.xcodeproj">
+               ReferencedContainer = "container:Storytel.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77F3BA9228D508C30065045D"
-            BuildableName = "Storytel-Assignment.app"
-            BlueprintName = "Storytel-Assignment"
-            ReferencedContainer = "container:Storytel-Assignment.xcodeproj">
+            BuildableName = "Storytel.app"
+            BlueprintName = "Storytel"
+            ReferencedContainer = "container:Storytel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77F3BA9228D508C30065045D"
-            BuildableName = "Storytel-Assignment.app"
-            BlueprintName = "Storytel-Assignment"
-            ReferencedContainer = "container:Storytel-Assignment.xcodeproj">
+            BuildableName = "Storytel.app"
+            BlueprintName = "Storytel"
+            ReferencedContainer = "container:Storytel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
