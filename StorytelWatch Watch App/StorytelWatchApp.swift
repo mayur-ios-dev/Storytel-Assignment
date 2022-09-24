@@ -11,7 +11,16 @@ import SwiftUI
 struct StorytelWatch_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QueryResultsView(
+                viewModel: QueryResultViewModel(
+                    queryMetadata: .init(
+                        query: "Harry",
+                        filter: .books,
+                        store: "STHP-SE"
+                    ),
+                    api: ApiQueryService()
+                )
+            )
         }
     }
 }

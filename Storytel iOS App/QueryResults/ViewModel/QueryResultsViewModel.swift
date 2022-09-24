@@ -114,29 +114,9 @@ private extension QueryResultsViewModel {
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher(),
             bookTitle: item.title,
-            authors: item.authors.map{ $0.name }.joined(separator: ", "),
-            narrators: item.narrators.map{ $0.name }.joined(separator: ", ")
+            authors: item.byAuthors,
+            narrators: item.withNarrators
         )
-    }
-}
-
-// MARK: - ApiQueryResult Helpers
-private extension Optional where Wrapped == ApiQueryResult {
-    func appending(_ apiQueryResult: ApiQueryResult) -> Self {
-        guard let self = self else { return apiQueryResult }
-        
-        return ApiQueryResult(
-            query: apiQueryResult.query,
-            filter: apiQueryResult.filter,
-            nextPageToken: apiQueryResult.nextPageToken,
-            totalCount: apiQueryResult.totalCount,
-            items: self.items + apiQueryResult.items
-        )
-    }
-    
-    var hasMoreItemsToLoad: Bool {
-        guard let self = self else { return true }
-        return self.items.count < self.totalCount
     }
 }
 
