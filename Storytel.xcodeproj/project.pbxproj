@@ -23,19 +23,39 @@
 		7735448628DCA5C0000A5CF0 /* QueryMetadataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448528DCA5C0000A5CF0 /* QueryMetadataModel.swift */; };
 		7735448B28DCEF12000A5CF0 /* ApiImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448A28DCEF12000A5CF0 /* ApiImageLoaderService.swift */; };
 		7735448D28DD1A6E000A5CF0 /* QueryResultsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448C28DD1A6E000A5CF0 /* QueryResultsViewModelTests.swift */; };
+		774F3B7328DF3977004A3185 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 774F3B7228DF3977004A3185 /* SnapshotTesting */; };
+		77DDCBB628DF35DA00349567 /* StorytelWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 77DDCBB528DF35DA00349567 /* StorytelWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		77DDCBBB28DF35DA00349567 /* StorytelWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDCBBA28DF35DA00349567 /* StorytelWatchApp.swift */; };
+		77DDCBBD28DF35DA00349567 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDCBBC28DF35DA00349567 /* ContentView.swift */; };
+		77DDCBBF28DF35DC00349567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DDCBBE28DF35DC00349567 /* Assets.xcassets */; };
+		77DDCBC228DF35DC00349567 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DDCBC128DF35DC00349567 /* Preview Assets.xcassets */; };
+		77DDCBCC28DF35DC00349567 /* StorytelWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDCBCB28DF35DC00349567 /* StorytelWatch_Watch_AppTests.swift */; };
 		77E7643628DD3C0800ACDEFE /* NSLayoutConstraint+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E7643528DD3C0800ACDEFE /* NSLayoutConstraint+Priority.swift */; };
 		77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9628D508C30065045D /* AppDelegate.swift */; };
 		77F3BA9928D508C30065045D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BA9828D508C30065045D /* SceneDelegate.swift */; };
 		77F3BAA028D508C40065045D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F3BA9F28D508C40065045D /* Assets.xcassets */; };
 		77F3BAA328D508C40065045D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F3BAA128D508C40065045D /* LaunchScreen.storyboard */; };
 		77F3BAAE28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BAAD28D508C40065045D /* QueryResultsViewControllerSnapshotTests.swift */; };
-		77F3BAC828D7646F0065045D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 77F3BAC728D7646F0065045D /* SnapshotTesting */; };
 		77F3BACA28D765800065045D /* QueryResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BAC928D765800065045D /* QueryResultsViewController.swift */; };
 		77F3BACE28D771FE0065045D /* QueryResultTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BACD28D771FE0065045D /* QueryResultTableViewCellSnapshotTests.swift */; };
 		77F3BAD028D7761B0065045D /* QueryResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3BACF28D7761B0065045D /* QueryResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		77DDCBB728DF35DA00349567 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77F3BA8B28D508C30065045D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77DDCBB428DF35DA00349567;
+			remoteInfo = "StorytelWatch Watch App";
+		};
+		77DDCBC828DF35DC00349567 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77F3BA8B28D508C30065045D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77DDCBB428DF35DA00349567;
+			remoteInfo = "StorytelWatch Watch App";
+		};
 		77F3BAAA28D508C40065045D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 77F3BA8B28D508C30065045D /* Project object */;
@@ -44,6 +64,20 @@
 			remoteInfo = "Storytel-Assignment";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77DDCBDC28DF35DC00349567 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				77DDCBB628DF35DA00349567 /* StorytelWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7735446A28D89D8C000A5CF0 /* UIImage+SolidColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SolidColor.swift"; sourceTree = "<group>"; };
@@ -62,6 +96,14 @@
 		7735448528DCA5C0000A5CF0 /* QueryMetadataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryMetadataModel.swift; sourceTree = "<group>"; };
 		7735448A28DCEF12000A5CF0 /* ApiImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImageLoaderService.swift; sourceTree = "<group>"; };
 		7735448C28DD1A6E000A5CF0 /* QueryResultsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultsViewModelTests.swift; sourceTree = "<group>"; };
+		77DDCBB028DF35DA00349567 /* StorytelWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytelWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DDCBB528DF35DA00349567 /* StorytelWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StorytelWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DDCBBA28DF35DA00349567 /* StorytelWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytelWatchApp.swift; sourceTree = "<group>"; };
+		77DDCBBC28DF35DA00349567 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		77DDCBBE28DF35DC00349567 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77DDCBC128DF35DC00349567 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		77DDCBC728DF35DC00349567 /* StorytelWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StorytelWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DDCBCB28DF35DC00349567 /* StorytelWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytelWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
 		77E7643528DD3C0800ACDEFE /* NSLayoutConstraint+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Priority.swift"; sourceTree = "<group>"; };
 		77F3BA9328D508C30065045D /* Storytel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F3BA9628D508C30065045D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +119,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		77DDCBB228DF35DA00349567 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DDCBC428DF35DC00349567 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77F3BA9028D508C30065045D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77F3BAC828D7646F0065045D /* SnapshotTesting in Frameworks */,
+				774F3B7328DF3977004A3185 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +210,33 @@
 			path = ImageLoader;
 			sourceTree = "<group>";
 		};
+		77DDCBB928DF35DA00349567 /* StorytelWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				77DDCBBA28DF35DA00349567 /* StorytelWatchApp.swift */,
+				77DDCBBC28DF35DA00349567 /* ContentView.swift */,
+				77DDCBBE28DF35DC00349567 /* Assets.xcassets */,
+				77DDCBC028DF35DC00349567 /* Preview Content */,
+			);
+			path = "StorytelWatch Watch App";
+			sourceTree = "<group>";
+		};
+		77DDCBC028DF35DC00349567 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				77DDCBC128DF35DC00349567 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		77DDCBCA28DF35DC00349567 /* StorytelWatch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				77DDCBCB28DF35DC00349567 /* StorytelWatch_Watch_AppTests.swift */,
+			);
+			path = "StorytelWatch Watch AppTests";
+			sourceTree = "<group>";
+		};
 		77E7643728DD49CA00ACDEFE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +256,10 @@
 		77F3BA8A28D508C30065045D = {
 			isa = PBXGroup;
 			children = (
-				77F3BA9528D508C30065045D /* Storytel */,
-				77F3BAAC28D508C40065045D /* StorytelTests */,
+				77F3BA9528D508C30065045D /* Storytel iOS App */,
+				77F3BAAC28D508C40065045D /* Storytel iOS App Tests */,
+				77DDCBB928DF35DA00349567 /* StorytelWatch Watch App */,
+				77DDCBCA28DF35DC00349567 /* StorytelWatch Watch AppTests */,
 				77F3BA9428D508C30065045D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -184,11 +269,14 @@
 			children = (
 				77F3BA9328D508C30065045D /* Storytel.app */,
 				77F3BAA928D508C40065045D /* StorytelTests.xctest */,
+				77DDCBB028DF35DA00349567 /* StorytelWatch.app */,
+				77DDCBB528DF35DA00349567 /* StorytelWatch Watch App.app */,
+				77DDCBC728DF35DC00349567 /* StorytelWatch Watch AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		77F3BA9528D508C30065045D /* Storytel */ = {
+		77F3BA9528D508C30065045D /* Storytel iOS App */ = {
 			isa = PBXGroup;
 			children = (
 				77F3BA9628D508C30065045D /* AppDelegate.swift */,
@@ -200,10 +288,10 @@
 				77F3BAA128D508C40065045D /* LaunchScreen.storyboard */,
 				77F3BAA428D508C40065045D /* Info.plist */,
 			);
-			path = Storytel;
+			path = "Storytel iOS App";
 			sourceTree = "<group>";
 		};
-		77F3BAAC28D508C40065045D /* StorytelTests */ = {
+		77F3BAAC28D508C40065045D /* Storytel iOS App Tests */ = {
 			isa = PBXGroup;
 			children = (
 				7735447928D93BA9000A5CF0 /* ApiQueryResultTests.swift */,
@@ -214,12 +302,64 @@
 				7735448328DC9988000A5CF0 /* QueryLoaderTableViewCellSnapshotTests.swift */,
 				7735448C28DD1A6E000A5CF0 /* QueryResultsViewModelTests.swift */,
 			);
-			path = StorytelTests;
+			path = "Storytel iOS App Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		77DDCBAF28DF35DA00349567 /* StorytelWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77DDCBDD28DF35DC00349567 /* Build configuration list for PBXNativeTarget "StorytelWatch" */;
+			buildPhases = (
+				77DDCBAE28DF35DA00349567 /* Resources */,
+				77DDCBDC28DF35DC00349567 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77DDCBB828DF35DA00349567 /* PBXTargetDependency */,
+			);
+			name = StorytelWatch;
+			productName = StorytelWatch;
+			productReference = 77DDCBB028DF35DA00349567 /* StorytelWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		77DDCBB428DF35DA00349567 /* StorytelWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77DDCBD928DF35DC00349567 /* Build configuration list for PBXNativeTarget "StorytelWatch Watch App" */;
+			buildPhases = (
+				77DDCBB128DF35DA00349567 /* Sources */,
+				77DDCBB228DF35DA00349567 /* Frameworks */,
+				77DDCBB328DF35DA00349567 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StorytelWatch Watch App";
+			productName = "StorytelWatch Watch App";
+			productReference = 77DDCBB528DF35DA00349567 /* StorytelWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		77DDCBC628DF35DC00349567 /* StorytelWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77DDCBE028DF35DC00349567 /* Build configuration list for PBXNativeTarget "StorytelWatch Watch AppTests" */;
+			buildPhases = (
+				77DDCBC328DF35DC00349567 /* Sources */,
+				77DDCBC428DF35DC00349567 /* Frameworks */,
+				77DDCBC528DF35DC00349567 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77DDCBC928DF35DC00349567 /* PBXTargetDependency */,
+			);
+			name = "StorytelWatch Watch AppTests";
+			productName = "StorytelWatch Watch AppTests";
+			productReference = 77DDCBC728DF35DC00349567 /* StorytelWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		77F3BA9228D508C30065045D /* Storytel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77F3BABD28D508C40065045D /* Build configuration list for PBXNativeTarget "Storytel" */;
@@ -252,7 +392,7 @@
 			);
 			name = StorytelTests;
 			packageProductDependencies = (
-				77F3BAC728D7646F0065045D /* SnapshotTesting */,
+				774F3B7228DF3977004A3185 /* SnapshotTesting */,
 			);
 			productName = "Storytel-AssignmentTests";
 			productReference = 77F3BAA928D508C40065045D /* StorytelTests.xctest */;
@@ -268,6 +408,16 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					77DDCBAF28DF35DA00349567 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					77DDCBB428DF35DA00349567 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					77DDCBC628DF35DC00349567 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 77DDCBB428DF35DA00349567;
+					};
 					77F3BA9228D508C30065045D = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -287,7 +437,7 @@
 			);
 			mainGroup = 77F3BA8A28D508C30065045D;
 			packageReferences = (
-				77F3BAC628D7646F0065045D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				774F3B7128DF3977004A3185 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 77F3BA9428D508C30065045D /* Products */;
 			projectDirPath = "";
@@ -295,11 +445,37 @@
 			targets = (
 				77F3BA9228D508C30065045D /* Storytel */,
 				77F3BAA828D508C40065045D /* StorytelTests */,
+				77DDCBAF28DF35DA00349567 /* StorytelWatch */,
+				77DDCBB428DF35DA00349567 /* StorytelWatch Watch App */,
+				77DDCBC628DF35DC00349567 /* StorytelWatch Watch AppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		77DDCBAE28DF35DA00349567 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DDCBB328DF35DA00349567 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DDCBC228DF35DC00349567 /* Preview Assets.xcassets in Resources */,
+				77DDCBBF28DF35DC00349567 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DDCBC528DF35DC00349567 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77F3BA9128D508C30065045D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +495,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		77DDCBB128DF35DA00349567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DDCBBD28DF35DA00349567 /* ContentView.swift in Sources */,
+				77DDCBBB28DF35DA00349567 /* StorytelWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DDCBC328DF35DC00349567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DDCBCC28DF35DC00349567 /* StorytelWatch_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77F3BA8F28D508C30065045D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +552,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		77DDCBB828DF35DA00349567 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77DDCBB428DF35DA00349567 /* StorytelWatch Watch App */;
+			targetProxy = 77DDCBB728DF35DA00349567 /* PBXContainerItemProxy */;
+		};
+		77DDCBC928DF35DC00349567 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77DDCBB428DF35DA00349567 /* StorytelWatch Watch App */;
+			targetProxy = 77DDCBC828DF35DC00349567 /* PBXContainerItemProxy */;
+		};
 		77F3BAAB28D508C40065045D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 77F3BA9228D508C30065045D /* Storytel */;
@@ -378,6 +581,138 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		77DDCBDA28DF35DC00349567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StorytelWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 5RY5NF7FKU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StorytelWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leotils.StorytelWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		77DDCBDB28DF35DC00349567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StorytelWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 5RY5NF7FKU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StorytelWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leotils.StorytelWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		77DDCBDE28DF35DC00349567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RY5NF7FKU;
+				INFOPLIST_KEY_CFBundleDisplayName = StorytelWatch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leotils.StorytelWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		77DDCBDF28DF35DC00349567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RY5NF7FKU;
+				INFOPLIST_KEY_CFBundleDisplayName = StorytelWatch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leotils.StorytelWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		77DDCBE128DF35DC00349567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RY5NF7FKU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leotils.StorytelWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StorytelWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StorytelWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		77DDCBE228DF35DC00349567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RY5NF7FKU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leotils.StorytelWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StorytelWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StorytelWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		77F3BABB28D508C40065045D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -501,7 +836,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5RY5NF7FKU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Storytel/Info.plist;
+				INFOPLIST_FILE = "Storytel iOS App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -528,7 +863,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5RY5NF7FKU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Storytel/Info.plist;
+				INFOPLIST_FILE = "Storytel iOS App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -589,6 +924,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		77DDCBD928DF35DC00349567 /* Build configuration list for PBXNativeTarget "StorytelWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DDCBDA28DF35DC00349567 /* Debug */,
+				77DDCBDB28DF35DC00349567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77DDCBDD28DF35DC00349567 /* Build configuration list for PBXNativeTarget "StorytelWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DDCBDE28DF35DC00349567 /* Debug */,
+				77DDCBDF28DF35DC00349567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77DDCBE028DF35DC00349567 /* Build configuration list for PBXNativeTarget "StorytelWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DDCBE128DF35DC00349567 /* Debug */,
+				77DDCBE228DF35DC00349567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		77F3BA8E28D508C30065045D /* Build configuration list for PBXProject "Storytel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -619,7 +981,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		77F3BAC628D7646F0065045D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+		774F3B7128DF3977004A3185 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
 			requirement = {
@@ -630,9 +992,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		77F3BAC728D7646F0065045D /* SnapshotTesting */ = {
+		774F3B7228DF3977004A3185 /* SnapshotTesting */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 77F3BAC628D7646F0065045D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			package = 774F3B7128DF3977004A3185 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
