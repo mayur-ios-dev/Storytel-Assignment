@@ -24,6 +24,12 @@
 		7735448B28DCEF12000A5CF0 /* ApiImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448A28DCEF12000A5CF0 /* ApiImageLoaderService.swift */; };
 		7735448D28DD1A6E000A5CF0 /* QueryResultsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448C28DD1A6E000A5CF0 /* QueryResultsViewModelTests.swift */; };
 		774F3B7328DF3977004A3185 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 774F3B7228DF3977004A3185 /* SnapshotTesting */; };
+		77D820DD28DF3C5400EE4C89 /* UrlRequestBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */; };
+		77D820DF28DF3C9200EE4C89 /* URLSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447528D92659000A5CF0 /* URLSessionType.swift */; };
+		77D820E028DF3CCA00EE4C89 /* ApiQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447328D91BCB000A5CF0 /* ApiQueryResult.swift */; };
+		77D820E128DF3CCA00EE4C89 /* ApiQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735446D28D8E076000A5CF0 /* ApiQueryService.swift */; };
+		77D820E228DF3CCA00EE4C89 /* ApiQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735446F28D8F8CB000A5CF0 /* ApiQueryRequest.swift */; };
+		77D820E528DF3D2F00EE4C89 /* QueryMetadataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448528DCA5C0000A5CF0 /* QueryMetadataModel.swift */; };
 		77DDCBB628DF35DA00349567 /* StorytelWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 77DDCBB528DF35DA00349567 /* StorytelWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		77DDCBBB28DF35DA00349567 /* StorytelWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDCBBA28DF35DA00349567 /* StorytelWatchApp.swift */; };
 		77DDCBBD28DF35DA00349567 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDCBBC28DF35DA00349567 /* ContentView.swift */; };
@@ -184,10 +190,7 @@
 		7735446C28D8DB89000A5CF0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */,
-				7735447528D92659000A5CF0 /* URLSessionType.swift */,
 				7735448928DCEEFD000A5CF0 /* ImageLoader */,
-				7735448728DCEEBE000A5CF0 /* ApiQuery */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -208,6 +211,41 @@
 				7735448A28DCEF12000A5CF0 /* ApiImageLoaderService.swift */,
 			);
 			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		77D820DC28DF3B7C00EE4C89 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				77D820E328DF3D0900EE4C89 /* QueryResults */,
+				77D820DE28DF3C8000EE4C89 /* Network */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		77D820DE28DF3C8000EE4C89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7735448728DCEEBE000A5CF0 /* ApiQuery */,
+				7735447128D8F910000A5CF0 /* UrlRequestBuildable.swift */,
+				7735447528D92659000A5CF0 /* URLSessionType.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		77D820E328DF3D0900EE4C89 /* QueryResults */ = {
+			isa = PBXGroup;
+			children = (
+				77D820E428DF3D2600EE4C89 /* Model */,
+			);
+			path = QueryResults;
+			sourceTree = "<group>";
+		};
+		77D820E428DF3D2600EE4C89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7735448528DCA5C0000A5CF0 /* QueryMetadataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		77DDCBB928DF35DA00349567 /* StorytelWatch Watch App */ = {
@@ -248,7 +286,6 @@
 		77E7643828DD49D600ACDEFE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7735448528DCA5C0000A5CF0 /* QueryMetadataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +293,7 @@
 		77F3BA8A28D508C30065045D = {
 			isa = PBXGroup;
 			children = (
+				77D820DC28DF3B7C00EE4C89 /* Shared */,
 				77F3BA9528D508C30065045D /* Storytel iOS App */,
 				77F3BAAC28D508C40065045D /* Storytel iOS App Tests */,
 				77DDCBB928DF35DA00349567 /* StorytelWatch Watch App */,
@@ -499,8 +537,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D820DF28DF3C9200EE4C89 /* URLSessionType.swift in Sources */,
 				77DDCBBD28DF35DA00349567 /* ContentView.swift in Sources */,
+				77D820E228DF3CCA00EE4C89 /* ApiQueryRequest.swift in Sources */,
+				77D820E528DF3D2F00EE4C89 /* QueryMetadataModel.swift in Sources */,
 				77DDCBBB28DF35DA00349567 /* StorytelWatchApp.swift in Sources */,
+				77D820DD28DF3C5400EE4C89 /* UrlRequestBuildable.swift in Sources */,
+				77D820E028DF3CCA00EE4C89 /* ApiQueryResult.swift in Sources */,
+				77D820E128DF3CCA00EE4C89 /* ApiQueryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
