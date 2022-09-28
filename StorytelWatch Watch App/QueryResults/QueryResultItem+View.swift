@@ -7,16 +7,7 @@
 
 import SwiftUI
 
-struct QueryResultItem: View {
-    var imageUrl: String
-    var title: String
-    var authors: String
-    var narrators: String
-}
-
-extension QueryResultItem: Hashable {}
-
-extension QueryResultItem {
+extension QueryResultItem: View {
     var body: some View {
         VStack {
             HStack(alignment: .top) {

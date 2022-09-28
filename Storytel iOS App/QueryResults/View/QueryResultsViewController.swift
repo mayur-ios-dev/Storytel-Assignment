@@ -8,15 +8,15 @@
 import UIKit
 import Combine
 
-final class QueryResultsViewController: UIViewController {
-    private let viewModel: QueryResultsViewModelType
-    private let input = PassthroughSubject<QueryResultsViewModel.Input, Never>()
+final class QueryResultsViewController<VM: QueryResultTableViewModelType>: UIViewController {
+    private let viewModel: VM
+    private var bridge: UITableViewBridge!
     private var subscriptions =  Set<AnyCancellable>()
     
     // MARK: UI properties
     private var tableView: UITableView!
     
-    init(viewModel: QueryResultsViewModelType) {
+    init(viewModel: VM) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,7 +32,6 @@ final class QueryResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bind()
     }
 }
 
@@ -49,8 +48,12 @@ private extension QueryResultsViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .systemGray4
         tableView.separatorInset = .zero
-        tableView.delegate = self
-        tableView.dataSource = self
+        
+        bridge = UITableViewBridge()
+        bridge.delegate = self
+        tableView.delegate = bridge
+        tableView.dataSource = bridge
+        
         tableView.register(
             QueryHeaderTableViewCell.self,
             forCellReuseIdentifier: .queryHeaderCellReuseIdentifier
@@ -76,16 +79,17 @@ private extension QueryResultsViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension QueryResultsViewController: UITableViewDelegate {
+extension QueryResultsViewController: UITableViewBridgeDelegate {
     func tableView(_ tableView: UITableView,
                    willDisplay cell: UITableViewCell,
                    forRowAt indexPath: IndexPath) {
-        input.send(.willDisplayCell(at: indexPath))
+        guard indexPath.section == 2 else { return }
+        viewModel.loadData()
     }
 }
 
 // MARK: - UITableViewDataSource
-extension QueryResultsViewController: UITableViewDataSource {
+extension QueryResultsViewController {
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel.numberOfSections
     }
@@ -108,7 +112,7 @@ extension QueryResultsViewController: UITableViewDataSource {
                 )
                 return UITableViewCell()
             }
-            headerCell.set(query: viewModel.queryString)
+            headerCell.set(query: viewModel.query)
             return headerCell
         case 1:
             guard let resultCell = tableView.dequeueReusableCell(
@@ -119,7 +123,7 @@ extension QueryResultsViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             do {
-                try resultCell.set(queryResult: viewModel.queryResult(at: indexPath.row))
+                try resultCell.set(queryResult: viewModel.queryCellModel(at: indexPath.row))
             } catch {
                 assertionFailure("\(error)")
                 return UITableViewCell()
@@ -143,25 +147,15 @@ extension QueryResultsViewController: UITableViewDataSource {
     }
 }
 
-private extension QueryResultsViewController {
-    func bind() {
-        viewModel.map(
-            input.eraseToAnyPublisher()
-        ).sink { [weak self] output in
-            self?.handleOutput(output)
-        }.store(in: &subscriptions)
-    }
+private extension QueryResultViewModelType {
+    var numberOfSections: Int { 3 }
     
-    func handleOutput(_ output: QueryResultsViewModel.Output) {
-        switch output {
-        case .newDataAdded(let startIndex, let count):
-            let endIndex = startIndex + count
-            var indexPathsToReload: [IndexPath] = []
-            for row in startIndex..<endIndex {
-                indexPathsToReload.append(.init(row: row, section: 1))
-            }
-            
-            tableView.insertRows(at: indexPathsToReload, with: .automatic)
+    func numberOfRows(inSection section: Int) -> Int {
+        switch section {
+        case 0: return 1
+        case 1: return items.count
+        case 2: return hasItemsToLoad ? 1 : 0
+        default : return 0
         }
     }
 }

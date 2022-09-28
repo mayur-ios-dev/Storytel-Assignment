@@ -207,13 +207,6 @@ private extension UIImage {
 
 // MARK: - Interface
 
-struct QueryResultCellModel {
-    var image: AnyPublisher<UIImage, Error>
-    var bookTitle: String
-    var authors: String
-    var narrators: String
-}
-
 extension QueryResultTableViewCell {
     func set(queryResult: QueryResultCellModel) {
         bookTitleLabel.text = queryResult.bookTitle

@@ -15,7 +15,6 @@
 		7735447628D92659000A5CF0 /* URLSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447528D92659000A5CF0 /* URLSessionType.swift */; };
 		7735447828D92C84000A5CF0 /* UrlRequestBuildableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447728D92C84000A5CF0 /* UrlRequestBuildableTests.swift */; };
 		7735447A28D93BA9000A5CF0 /* ApiQueryResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447928D93BA9000A5CF0 /* ApiQueryResultTests.swift */; };
-		7735447C28DB83E8000A5CF0 /* QueryResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447B28DB83E8000A5CF0 /* QueryResultsViewModel.swift */; };
 		7735447E28DB991F000A5CF0 /* QueryHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447D28DB991F000A5CF0 /* QueryHeaderTableViewCell.swift */; };
 		7735448028DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735447F28DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift */; };
 		7735448228DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448128DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift */; };
@@ -31,8 +30,14 @@
 		77D820E228DF3CCA00EE4C89 /* ApiQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735446F28D8F8CB000A5CF0 /* ApiQueryRequest.swift */; };
 		77D820E528DF3D2F00EE4C89 /* QueryMetadataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448528DCA5C0000A5CF0 /* QueryMetadataModel.swift */; };
 		77D820E628DF3DBE00EE4C89 /* ApiImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735448A28DCEF12000A5CF0 /* ApiImageLoaderService.swift */; };
-		77D820E928DF453900EE4C89 /* QueryResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D820E828DF453900EE4C89 /* QueryResultItem.swift */; };
+		77D820E928DF453900EE4C89 /* QueryResultItem+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D820E828DF453900EE4C89 /* QueryResultItem+View.swift */; };
 		77D820EB28DF536800EE4C89 /* QueryResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D820EA28DF536800EE4C89 /* QueryResultViewModel.swift */; };
+		77D820EE28DF7B3000EE4C89 /* QueryResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D820ED28DF7B3000EE4C89 /* QueryResultItem.swift */; };
+		77D820EF28DF7B5800EE4C89 /* QueryResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D820ED28DF7B3000EE4C89 /* QueryResultItem.swift */; };
+		77D820F028DF7B6700EE4C89 /* QueryResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D820EA28DF536800EE4C89 /* QueryResultViewModel.swift */; };
+		77D820F328DF806F00EE4C89 /* UITableViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D820F128DF7F0E00EE4C89 /* UITableViewBridge.swift */; };
+		77D820F528DF872000EE4C89 /* Publisher+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D820F428DF872000EE4C89 /* Publisher+Previous.swift */; };
+		77D820F628E07CB700EE4C89 /* Publisher+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D820F428DF872000EE4C89 /* Publisher+Previous.swift */; };
 		77DDCBB628DF35DA00349567 /* StorytelWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 77DDCBB528DF35DA00349567 /* StorytelWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		77DDCBBB28DF35DA00349567 /* StorytelWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDCBBA28DF35DA00349567 /* StorytelWatchApp.swift */; };
 		77DDCBBD28DF35DA00349567 /* QueryResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDCBBC28DF35DA00349567 /* QueryResultsView.swift */; };
@@ -97,7 +102,6 @@
 		7735447528D92659000A5CF0 /* URLSessionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionType.swift; sourceTree = "<group>"; };
 		7735447728D92C84000A5CF0 /* UrlRequestBuildableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestBuildableTests.swift; sourceTree = "<group>"; };
 		7735447928D93BA9000A5CF0 /* ApiQueryResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQueryResultTests.swift; sourceTree = "<group>"; };
-		7735447B28DB83E8000A5CF0 /* QueryResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultsViewModel.swift; sourceTree = "<group>"; };
 		7735447D28DB991F000A5CF0 /* QueryHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		7735447F28DC8DE9000A5CF0 /* QueryHeaderTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHeaderTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
 		7735448128DC97B2000A5CF0 /* QueryLoaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryLoaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -105,8 +109,11 @@
 		7735448528DCA5C0000A5CF0 /* QueryMetadataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryMetadataModel.swift; sourceTree = "<group>"; };
 		7735448A28DCEF12000A5CF0 /* ApiImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImageLoaderService.swift; sourceTree = "<group>"; };
 		7735448C28DD1A6E000A5CF0 /* QueryResultsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultsViewModelTests.swift; sourceTree = "<group>"; };
-		77D820E828DF453900EE4C89 /* QueryResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultItem.swift; sourceTree = "<group>"; };
+		77D820E828DF453900EE4C89 /* QueryResultItem+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueryResultItem+View.swift"; sourceTree = "<group>"; };
 		77D820EA28DF536800EE4C89 /* QueryResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultViewModel.swift; sourceTree = "<group>"; };
+		77D820ED28DF7B3000EE4C89 /* QueryResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultItem.swift; sourceTree = "<group>"; };
+		77D820F128DF7F0E00EE4C89 /* UITableViewBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewBridge.swift; sourceTree = "<group>"; };
+		77D820F428DF872000EE4C89 /* Publisher+Previous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Previous.swift"; sourceTree = "<group>"; };
 		77DDCBB028DF35DA00349567 /* StorytelWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytelWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDCBB528DF35DA00349567 /* StorytelWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StorytelWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDCBBA28DF35DA00349567 /* StorytelWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytelWatchApp.swift; sourceTree = "<group>"; };
@@ -166,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				7735446428D7D800000A5CF0 /* View */,
-				77E7643728DD49CA00ACDEFE /* ViewModel */,
 			);
 			path = QueryResults;
 			sourceTree = "<group>";
@@ -187,6 +193,8 @@
 			children = (
 				7735446A28D89D8C000A5CF0 /* UIImage+SolidColor.swift */,
 				77E7643528DD3C0800ACDEFE /* NSLayoutConstraint+Priority.swift */,
+				77D820F128DF7F0E00EE4C89 /* UITableViewBridge.swift */,
+				77D820F428DF872000EE4C89 /* Publisher+Previous.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -219,6 +227,8 @@
 		77D820DC28DF3B7C00EE4C89 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				77D820EA28DF536800EE4C89 /* QueryResultViewModel.swift */,
+				77D820F728E4549F00EE4C89 /* ViewModel */,
 				77D820E328DF3D0900EE4C89 /* QueryResults */,
 				77D820DE28DF3C8000EE4C89 /* Network */,
 			);
@@ -248,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				7735448528DCA5C0000A5CF0 /* QueryMetadataModel.swift */,
+				77D820ED28DF7B3000EE4C89 /* QueryResultItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,10 +267,16 @@
 			isa = PBXGroup;
 			children = (
 				77DDCBBC28DF35DA00349567 /* QueryResultsView.swift */,
-				77D820EA28DF536800EE4C89 /* QueryResultViewModel.swift */,
-				77D820E828DF453900EE4C89 /* QueryResultItem.swift */,
+				77D820E828DF453900EE4C89 /* QueryResultItem+View.swift */,
 			);
 			path = QueryResults;
+			sourceTree = "<group>";
+		};
+		77D820F728E4549F00EE4C89 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		77DDCBB928DF35DA00349567 /* StorytelWatch Watch App */ = {
@@ -287,14 +304,6 @@
 				77DDCBCB28DF35DC00349567 /* StorytelWatch_Watch_AppTests.swift */,
 			);
 			path = "StorytelWatch Watch AppTests";
-			sourceTree = "<group>";
-		};
-		77E7643728DD49CA00ACDEFE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7735447B28DB83E8000A5CF0 /* QueryResultsViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		77F3BA8A28D508C30065045D = {
@@ -548,10 +557,12 @@
 				77DDCBBD28DF35DA00349567 /* QueryResultsView.swift in Sources */,
 				77D820E228DF3CCA00EE4C89 /* ApiQueryRequest.swift in Sources */,
 				77D820E528DF3D2F00EE4C89 /* QueryMetadataModel.swift in Sources */,
-				77D820E928DF453900EE4C89 /* QueryResultItem.swift in Sources */,
+				77D820E928DF453900EE4C89 /* QueryResultItem+View.swift in Sources */,
+				77D820F528DF872000EE4C89 /* Publisher+Previous.swift in Sources */,
 				77D820E628DF3DBE00EE4C89 /* ApiImageLoaderService.swift in Sources */,
 				77DDCBBB28DF35DA00349567 /* StorytelWatchApp.swift in Sources */,
 				77D820DD28DF3C5400EE4C89 /* UrlRequestBuildable.swift in Sources */,
+				77D820EE28DF7B3000EE4C89 /* QueryResultItem.swift in Sources */,
 				77D820EB28DF536800EE4C89 /* QueryResultViewModel.swift in Sources */,
 				77D820E028DF3CCA00EE4C89 /* ApiQueryResult.swift in Sources */,
 				77D820E128DF3CCA00EE4C89 /* ApiQueryService.swift in Sources */,
@@ -570,9 +581,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7735447C28DB83E8000A5CF0 /* QueryResultsViewModel.swift in Sources */,
 				77F3BA9728D508C30065045D /* AppDelegate.swift in Sources */,
 				77F3BAD028D7761B0065045D /* QueryResultTableViewCell.swift in Sources */,
+				77D820F328DF806F00EE4C89 /* UITableViewBridge.swift in Sources */,
 				7735447028D8F8CB000A5CF0 /* ApiQueryRequest.swift in Sources */,
 				7735448628DCA5C0000A5CF0 /* QueryMetadataModel.swift in Sources */,
 				7735446E28D8E076000A5CF0 /* ApiQueryService.swift in Sources */,
@@ -580,6 +591,9 @@
 				77E7643628DD3C0800ACDEFE /* NSLayoutConstraint+Priority.swift in Sources */,
 				7735447428D91BCB000A5CF0 /* ApiQueryResult.swift in Sources */,
 				7735447E28DB991F000A5CF0 /* QueryHeaderTableViewCell.swift in Sources */,
+				77D820F028DF7B6700EE4C89 /* QueryResultViewModel.swift in Sources */,
+				77D820EF28DF7B5800EE4C89 /* QueryResultItem.swift in Sources */,
+				77D820F628E07CB700EE4C89 /* Publisher+Previous.swift in Sources */,
 				7735448B28DCEF12000A5CF0 /* ApiImageLoaderService.swift in Sources */,
 				7735446B28D89D8C000A5CF0 /* UIImage+SolidColor.swift in Sources */,
 				77F3BACA28D765800065045D /* QueryResultsViewController.swift in Sources */,
