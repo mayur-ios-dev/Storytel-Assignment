@@ -1,0 +1,58 @@
+▿ ApiQueryResult
+  - filter: "books"
+  ▿ items: 2 elements
+    ▿ Item
+      ▿ authors: 1 element
+        ▿ Author
+          - id: "1998"
+          - name: "J.K. Rowling"
+      ▿ formats: 2 elements
+        ▿ Format
+          ▿ cover: Cover
+            - height: 640
+            - url: "https://covers.storytel.com/jpg-640/9781781108963.840360dc-84e7-4a25-af7f-e254cd897ff7"
+            - width: 640
+          - id: "134970"
+          - type: "abook"
+        ▿ Format
+          ▿ cover: Cover
+            - height: 640
+            - url: "https://covers.storytel.com/jpg-640/9781781105658.456743a3-8761-464e-a978-ab6c7e2a0639"
+            - width: 427
+          - id: "919648"
+          - type: "ebook"
+      - id: "134970"
+      ▿ narrators: 1 element
+        ▿ Narrator
+          - id: "167"
+          - name: "Björn Kjellman"
+      - title: "Harry Potter och Hemligheternas kammare"
+    ▿ Item
+      ▿ authors: 1 element
+        ▿ Author
+          - id: "1998"
+          - name: "J.K. Rowling"
+      ▿ formats: 2 elements
+        ▿ Format
+          ▿ cover: Cover
+            - height: 640
+            - url: "https://covers.storytel.com/jpg-640/9781781105689.189eb2d6-3362-4ce9-b326-0de4f27ee7e7"
+            - width: 427
+          - id: "919671"
+          - type: "ebook"
+        ▿ Format
+          ▿ cover: Cover
+            - height: 640
+            - url: "https://covers.storytel.com/jpg-640/9781781108987.70ac03bb-3a8c-4d49-bd44-5bc5740f3d49"
+            - width: 640
+          - id: "134978"
+          - type: "abook"
+      - id: "134978"
+      ▿ narrators: 1 element
+        ▿ Narrator
+          - id: "167"
+          - name: "Björn Kjellman"
+      - title: "Harry Potter och Den Flammande Bägaren"
+  - nextPageToken: "10"
+  - query: "harry"
+  - totalCount: 5637

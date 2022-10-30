@@ -1,0 +1,17 @@
+▿ https://api.storytel.net/search/client?testKey=testValue&testKey1=testValue1&testKey2=testValue2
+  ▿ url: Optional<URL>
+    - some: https://api.storytel.net/search/client?testKey=testValue&testKey1=testValue1&testKey2=testValue2
+  - cachePolicy: 0
+  - timeoutInterval: 60.0
+  - mainDocumentURL: Optional<URL>.none
+  - networkServiceType: NSURLRequestNetworkServiceType.NSURLRequestNetworkServiceType
+  - allowsCellularAccess: true
+  ▿ httpMethod: Optional<String>
+    - some: "POST"
+  ▿ allHTTPHeaderFields: Optional<Dictionary<String, String>>
+    - some: 0 key/value pairs
+  ▿ httpBody: Optional<Data>
+    - some: 8 bytes
+  - httpBodyStream: Optional<NSInputStream>.none
+  - httpShouldHandleCookies: true
+  - httpShouldUsePipelining: false
