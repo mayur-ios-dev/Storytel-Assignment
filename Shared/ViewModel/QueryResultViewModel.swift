@@ -22,9 +22,9 @@ final class QueryResultViewModel: QueryResultViewModelType {
     
     private var isLoading = false
     
-    private var subscriptions = Set<AnyCancellable>()
+    private var subscriptions = [AnyCancellable]()
     
-    @Published var queryResult: ApiQueryResult?
+    @Published private var queryResult: ApiQueryResult?
     
     init(queryMetadata: QueryMetadataModel,
          api: ApiQueryServiceType = ApiQueryService(),
@@ -89,6 +89,19 @@ struct QueryResultCellModel {
 protocol QueryResultTableViewModelType: QueryResultViewModelType {
     var newData: AnyPublisher<(startIndex: Int, count: Int), Never> { get }
     func queryCellModel(at index: Int) throws -> QueryResultCellModel
+}
+
+extension QueryResultTableViewModelType {
+    var numberOfSections: Int { 3 }
+    
+    func numberOfRows(inSection section: Int) -> Int {
+        switch section {
+        case 0: return 1
+        case 1: return items.count
+        case 2: return hasItemsToLoad ? 1 : 0
+        default : return 0
+        }
+    }
 }
 
 extension QueryResultViewModel: QueryResultTableViewModelType {

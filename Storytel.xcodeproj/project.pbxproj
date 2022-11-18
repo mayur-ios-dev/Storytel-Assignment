@@ -227,7 +227,6 @@
 		77D820DC28DF3B7C00EE4C89 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				77D820EA28DF536800EE4C89 /* QueryResultViewModel.swift */,
 				77D820F728E4549F00EE4C89 /* ViewModel */,
 				77D820E328DF3D0900EE4C89 /* QueryResults */,
 				77D820DE28DF3C8000EE4C89 /* Network */,
@@ -275,6 +274,7 @@
 		77D820F728E4549F00EE4C89 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				77D820EA28DF536800EE4C89 /* QueryResultViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

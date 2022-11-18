@@ -14,11 +14,11 @@ final class QueryResultsViewModelTests: XCTestCase {
     private var api: MockApiService!
     private var imageLoader: MockImageLoader!
     
-    private var subscriptions = Set<AnyCancellable>()
+    private var subscriptions = [AnyCancellable]()
     
     override func setUpWithError() throws {
         api = MockApiService()
-        viewModel = QueryResultsViewModel(
+        viewModel = QueryResultViewModel(
             queryMetadata: .init(
                 query: "Harry",
                 filter: .narrators,

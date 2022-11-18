@@ -11,7 +11,7 @@ import Combine
 final class QueryResultsViewController<VM: QueryResultTableViewModelType>: UIViewController {
     private let viewModel: VM
     private var bridge: UITableViewBridge!
-    private var subscriptions =  Set<AnyCancellable>()
+    private var subscriptions =  [AnyCancellable]()
     
     // MARK: UI properties
     private var tableView: UITableView!
@@ -146,20 +146,6 @@ extension QueryResultsViewController {
         }
     }
 }
-
-private extension QueryResultViewModelType {
-    var numberOfSections: Int { 3 }
-    
-    func numberOfRows(inSection section: Int) -> Int {
-        switch section {
-        case 0: return 1
-        case 1: return items.count
-        case 2: return hasItemsToLoad ? 1 : 0
-        default : return 0
-        }
-    }
-}
-
 
 // MARK: Cell Reuse Identifiers
 
